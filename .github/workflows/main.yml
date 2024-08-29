@@ -10,5 +10,5 @@ jobs:
         env:
           VAR_3: from step
         run: |
-          echo VAR_2: &VAR_2
-          echo VAR_3: &VAR_3
+          echo VAR_2: $VAR_2
+          echo VAR_3: $VAR_3
