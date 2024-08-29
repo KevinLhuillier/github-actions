@@ -5,7 +5,6 @@ jobs:
   say-hello:
     runs-on: ubuntu-latest
     steps:
-      - name: hello
       - run: echo ${{ 42 }}
       - run: echo ${{ 'main' == 'top' }}
       - run: echo ${{ contains(github.ref, 'main') }}
