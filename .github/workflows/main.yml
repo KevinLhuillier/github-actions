@@ -1,15 +1,11 @@
 name: Mon premier workflow
 on: [push]
+
 jobs:
   say-hello:
-    env:
-      VAR_2: from job
     runs-on: ubuntu-latest
     steps:
       - name: hello
-        env:
-          VAR_3: from step
-        run: |
-          echo VAR_2: $VAR_2
-          echo VAR_3: $VAR_3
-          echo VAR_3: ${{ env.VAR_2 }}
+      - run: echo ${{ 42 }}
+      - run: echo ${{ 'main' == 'top' }}
+      - run: echo ${{ contains(github.ref, 'main') }}
